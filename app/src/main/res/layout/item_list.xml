@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="datanotes"
+            type="com.fal.challenge_chapter_empat.roomdb.EntityNote" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/nude">
+
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/vJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="30dp"
+                android:layout_toStartOf="@+id/btnEdit"
+                android:text='@{datanotes.title, default = "Judul"}'/>
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#40FFFFFF"
+                android:contentDescription="@string/delete"
+                android:src="@drawable/ic_baseline_delete_24" />
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toStartOf="@id/btnDelete"
+                android:backgroundTint="#40FFFFFF"
+                android:contentDescription="@string/edit"
+                android:src="@drawable/ic_baseline_edit_24" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
